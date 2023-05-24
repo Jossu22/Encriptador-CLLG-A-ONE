@@ -1,3 +1,30 @@
 body{
     background-color: #E5E5E5;
 }
+.itxt{
+    position: absolute;
+    width: 577px;
+    height: 48px;
+    left: 240px;
+    top: 168px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+/* identical to box height, or 48px */
+
+/* Dark blue/dark-blue-300 */
+    background-color: #E5E5E5;
+    border:none;
+    color: #0A3871;
+}
+p{
+    width: 205px;
+    height: 18px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+}
