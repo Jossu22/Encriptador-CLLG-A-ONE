@@ -1,6 +1,12 @@
 body{
     background-color: #E5E5E5;
 }
+.caja{
+    width: 930px;
+    height: 630px;
+	position: relative;
+    /*border: solid 5px #0A3871;*/
+}
 .itxt{
     position: absolute;
     width: 577px;
@@ -11,20 +17,50 @@ body{
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
-/* identical to box height, or 48px */
-
-/* Dark blue/dark-blue-300 */
     background-color: #E5E5E5;
     border:none;
     color: #0A3871;
 }
+.itxt:active{
+    border:none;
+}
 p{
+    position: absolute;
+    left: 240px;
+    top: 480px;
     width: 205px;
     height: 18px;
-    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 150%;
     color: #495057;
     opacity: 0.8;
+}
+.btnC{
+    position: absolute;
+    left: 240px;
+    top: 520px;
+    width: 228px;
+    height: 57px;
+    color: #D8DFE8;
+    font-size: 21px;
+    background: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+    
+}
+.btnD{
+    position: absolute;
+    left: 520px;
+    top: 520px;
+    width: 228px;
+    height: 57px;
+    color: #0A3871;
+    font-size: 21px;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+    
 }
