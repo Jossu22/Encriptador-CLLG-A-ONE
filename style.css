@@ -1,24 +1,24 @@
 body{
     background-color: #E5E5E5;
 }
-.caja{
+.box{
     width: 930px;
     height: 630px;
 	position: relative;
-    /*border: solid 5px #0A3871;*/
 }
 .itxt{
     position: absolute;
     width: 577px;
     height: 48px;
     left: 240px;
-    top: 168px;
+    top: 130px;
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
     background-color: #E5E5E5;
     border:none;
+    outline: none;
     color: #0A3871;
 }
 .itxt:active{
@@ -63,4 +63,28 @@ p{
     border-radius: 24px;
     cursor: pointer;
     
+}
+.childB{
+    position: absolute;
+    width: 300px;
+    height: 540px;
+    left: 1000px;
+    top: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+.otxt{
+    position: absolute;
+    width: 150px;
+    height: 170px;
+    margin-left: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    border-radius: 32px;
+    border:none;
+    outline: none;
+    color: #0A3871;
 }
