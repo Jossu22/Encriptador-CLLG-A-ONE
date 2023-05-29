@@ -6,7 +6,7 @@ body{
     height: 630px;
 	position: relative;
 }
-.itxt{
+#itxt{
     position: absolute;
     width: 577px;
     height: 148px;
@@ -70,13 +70,13 @@ p{
     justify-content: center;
     width: 300px;
     height: 580px;
-    left: 950px;
+    left: 900px;
     top: 40px;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
 }
-.otxt{
+#otxt{
     position: absolute;
     width: 280px;
     height: 450px;

@@ -6,19 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador By: JDMF</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        var text = "";
+        function copytxt(){
+            text = document.getElementById("itxt").value;
+            document.getElementById("otxt").value = text;
+        }
+    </script>
 </head>
 <body>
     <div class="box">
 
-        <textarea class="itxt" type="text" rows="15" cols="30" placeholder="Ingrese el texto aqui"></textarea>
+        <textarea id="itxt" type="text" rows="15" cols="30" placeholder="Ingrese el texto aqui"></textarea>
         <p>Solo letras minúscilas y sin acentos</p>
-        <button class="btnC" type="button">Encriptar</button>
+        <button class="btnC" type="button" onclick="copytxt()">Encriptar</button>
         <button class="btnD" type="button">Desencriptar</button>
 
         <div class="childB">
 
-            <textarea class="otxt" type="text" rows="15" cols="30"></textarea>
-            <button class="copy" type="button">Copiar</button>
+            <textarea id="otxt" type="text" rows="15" cols="30"></textarea>
+            <button class="copy" type="button">Copiar!</button>
         
         </div>
     </div>
