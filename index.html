@@ -7,21 +7,26 @@
     <title>Encriptador By: JDMF</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        var vocalesReemplazar = {
-            "a": "ai",
-            "e": "enter",
-            "i": "imes",
-            "o": "ober",
-            "u": "ufat"
+        var vocalesEncrip = {
+            "a": "ai" , "e": "enter" , "i": "imes" , "o": "ober", "u": "ufat"
+        };
+        var vocalesDeencrip = {
+            "ai": "a" , "enter": "e" , "imes": "i" , "ober": "o", "ufat": "u"
         };
         function Encriptar() {
             let texto = document.getElementById("itxt").value;
             var nuevotexto = texto.replace(/[aeiou]/g, function(match){
-                return vocalesReemplazar[match];
+                return vocalesEncrip[match];
             });
             document.getElementById("otxt").value = nuevotexto;                          
         }
-
+        function Desencriptar() {
+            let texto = document.getElementById("itxt").value;
+            var nuevotexto = texto.replace(/ai|enter|imes|ober|ufat/g, function(match){
+                return vocalesDeencrip[match];
+            });
+            document.getElementById("otxt").value = nuevotexto;                          
+        }
         function ValidarTexto(){
             var verificardor = false;
             let texto = document.getElementById("itxt").value;
@@ -47,9 +52,9 @@
         <textarea id="itxt" type="text" rows="15" cols="30" placeholder="Ingrese el texto aqui"></textarea>
         <p>Solo letras minúscilas y sin acentos</p>
         <button class="btnC" type="button" onclick="ValidarTexto()">Encriptar</button>
-        <button class="btnD" type="button">Desencriptar</button>
+        <button class="btnD" type="button" onclick="Desencriptar()">Desencriptar</button>
 
-        <div class="childB">
+        <div class="box2">
 
             <textarea id="otxt" type="text" rows="15" cols="30"></textarea>
             <button class="copy" type="button">Copiar!</button>
