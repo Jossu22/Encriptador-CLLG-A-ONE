@@ -40,9 +40,13 @@
             }else{
                 alert("Evite usar acentos o mayúsculas en el texto");
             }
-            
-                
-    } 
+        }
+        function Copiarotxt(){
+            var textareaElement = document.getElementById("otxt");
+            textareaElement.select();
+            document.execCommand("copy");
+            alert("Texto copiado al portapapeles: " + textareaElement.value);
+        } 
         
     </script>
 </head>
@@ -57,7 +61,7 @@
         <div class="box2">
 
             <textarea id="otxt" type="text" rows="15" cols="30"></textarea>
-            <button class="copy" type="button">Copiar!</button>
+            <button class="copy" type="button" onclick="Copiarotxt()">Copiar!</button>
         
         </div>
     </div>
