@@ -7,7 +7,7 @@ body{
 	position: relative;
 }
 #itxt{
-    position: absolute;
+    position: relative;
     width: 577px;
     height: 148px;
     left: 240px;
@@ -66,13 +66,13 @@ p{
     
 }
 .box2{
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: center;
     width: 300px;
     height: 580px;
     left: 900px;
-    top: 40px;
+    top: -100px;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
@@ -104,4 +104,39 @@ p{
     border: 1px solid #0A3871;
     border-radius: 24px;
     cursor: pointer;
+}
+.copy::after{
+    content: "¡Texto copiado!";
+    font-size: 15px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3px;
+    width: 90px;
+    border-radius: 15%;
+    color:#FFFFFF;
+    background-color: #495057;
+    opacity: 0;
+}
+.copy:active::after{
+    animation: aparecer 0.4s ease;
+}
+@keyframes aparecer{
+    0%{
+        opacity: 0.25;
+        top: 30%;
+    }
+    50%{
+        opacity: 0.5;
+        top: 20%;
+    }
+    75%{
+        opacity: 0.7;
+        top: 10%;
+    }
+    100%{
+        opacity: 1;
+        top: 5%;
+    }
 }
