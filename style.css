@@ -20,6 +20,7 @@ body{
     border:none;
     outline: none;
     color: #0A3871;
+    resize: none;
 }
 .itxt:active{
     border:none;
@@ -88,6 +89,7 @@ p{
     border:none;
     outline: none;
     color: #495057;
+    resize: none;
 }
 .copy{
     position: absolute;    
