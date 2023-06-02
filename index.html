@@ -7,20 +7,31 @@
     <title>Encriptador By: JDMF</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        const Va = "ai";
-        const Ve = "enter";
-        const Vi = "imes";
-        const Vo = "ober";
-        const Vu = "ufat";
-        function Encriptador(){
+        var vocalesReemplazar = {
+            "a": "ai",
+            "e": "enter",
+            "i": "imes",
+            "o": "ober",
+            "u": "ufat"
+        };
+        function Encriptar() {
+            let texto = document.getElementById("itxt").value;
+            var nuevotexto = texto.replace(/[aeiou]/g, function(match){
+                return vocalesReemplazar[match];
+            });
+            document.getElementById("otxt").value = nuevotexto;                          
+        }
+
+        function ValidarTexto(){
             var verificardor = false;
             let texto = document.getElementById("itxt").value;
-            acentosyMayus = /[áéíóúÁÉÍÓÚABCDEFGHIJKLMNOPQRSTUVWXYZ]/; // Expresión regular para buscar acentos
-            if (acentosyMayus.test(texto)) {
+            acentos = /[áéíóúÁÉÍÓÚ]/;
+            mayus = /[A-Z]/; 
+            if (acentos.test(texto) || mayus.test(texto)) {
                 verificardor = true;
             }
-            if (verificardor == false){
-                alert("Procede");
+            if (verificardor == false){                  
+                Encriptar();
             }else{
                 alert("Evite usar acentos o mayúsculas en el texto");
             }
@@ -35,7 +46,7 @@
 
         <textarea id="itxt" type="text" rows="15" cols="30" placeholder="Ingrese el texto aqui"></textarea>
         <p>Solo letras minúscilas y sin acentos</p>
-        <button class="btnC" type="button" onclick="Encriptador()">Encriptar</button>
+        <button class="btnC" type="button" onclick="ValidarTexto()">Encriptar</button>
         <button class="btnD" type="button">Desencriptar</button>
 
         <div class="childB">
