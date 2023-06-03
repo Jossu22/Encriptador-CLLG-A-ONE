@@ -1,50 +1,63 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
 body{
     background-color: #E5E5E5;
+    margin: 0px 50px 0px 50px;
 }
-.box{
-    width: 930px;
-    height: 630px;
-	position: relative;
+.container{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 50px;
+}
+.inbox{
+    box-sizing: border-box;
+    width: 577px;
+    height: 548px;
+    padding-top: 70px;
 }
 #itxt{
-    position: relative;
-    width: 577px;
-    height: 148px;
-    left: 240px;
-    top: 130px;
+    width: 100%;
+    max-width: 577px;
+    height: 200px;
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
+    color: #0A3871;
     background-color: #E5E5E5;
     border:none;
     outline: none;
-    color: #0A3871;
     resize: none;
 }
-.itxt:active{
-    border:none;
+::placeholder{
+    color: #0A3871;
 }
 p{
-    position: absolute;
-    left: 260px;
-    top: 480px;
-    width: 205px;
-    height: 18px;
+    margin-top: 180px;
+    margin-left: 10px;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 150%;
     color: #495057;
     opacity: 0.8;
 }
+.boxboton{
+    display: flex;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
 .btnC{
-    position: absolute;
-    left: 240px;
-    top: 520px;
     width: 228px;
     height: 57px;
     color: #D8DFE8;
-    font-size: 21px;
+    font-size: 19px;
     background: #0A3871;
     border: 1px solid #0A3871;
     border-radius: 24px;
@@ -52,38 +65,29 @@ p{
     
 }
 .btnD{
-    position: absolute;
-    left: 520px;
-    top: 520px;
+    margin-left: 25px;
     width: 228px;
     height: 57px;
     color: #0A3871;
-    font-size: 21px;
+    font-size: 19px;
     background: #D8DFE8;
     border: 1px solid #0A3871;
     border-radius: 24px;
     cursor: pointer;
     
 }
-.box2{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 300px;
-    height: 580px;
-    left: 900px;
-    top: -100px;
+.outbox{
+    float: right;
+    width: 100%;
+    max-width: 250px;
+    padding: 20px 20px;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
 }
 #otxt{
-    position: absolute;
-    width: 280px;
+    width: 240px;
     height: 450px;
-    margin: 15px 10px;
-    text-align: justifys;
-    font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 150%;
@@ -92,51 +96,86 @@ p{
     color: #495057;
     resize: none;
 }
-.copy{
-    position: absolute;    
-    width: 150px;
+.btncopy{
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 90%;
     height: 57px;
-    top: 500px;
-    width: 228px;    
     color: #0A3871;
-    font-size: 21px;
+    font-size: 19px;
     background: #FFFFFF;
     border: 1px solid #0A3871;
     border-radius: 24px;
     cursor: pointer;
 }
-.copy::after{
-    content: "¡Texto copiado!";
-    font-size: 15px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 3px;
-    width: 90px;
-    border-radius: 15%;
-    color:#FFFFFF;
-    background-color: #495057;
-    opacity: 0;
+@media (max-width:965px){
+    .inbox{
+        box-sizing: border-box;-width: 577px;
+        height: 548px;
+        padding-top: 70px;
+    }
+    
+    #itxt{
+        width: 100%;
+        max-width: 577px;
+        height: 200px;
+    }
+    .boxboton{
+        display: flex;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .btnC{
+        width: 100%;
+        max-width: 228px;
+        height: 57px;
+        
+    }
+    .btnD{
+        margin-left: 25px;
+        width: 100%;
+        max-width: 228px;
+        height: 57px;
+        
+    }
+    .outbox{
+        float: right;
+        width: 100%;
+        max-width: 500px;
+        box-sizing: border-box;
+        height: 300px;
+        margin-top: 20px;
+        padding: 20px 20px;
+    }
+    #otxt{
+        width: 100%;
+        height: 190px;
+    }
 }
-.copy:active::after{
-    animation: aparecer 0.4s ease;
-}
-@keyframes aparecer{
-    0%{
-        opacity: 0.25;
-        top: 30%;
+@media (max-width:450px){
+    
+    .boxboton{
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 10px;
     }
-    50%{
-        opacity: 0.5;
-        top: 20%;
+    .btnC{
+        width: 100%;
+        height: 57px;
+        margin-left: 25px;
+        margin-bottom: 10px;
+        
     }
-    75%{
-        opacity: 0.7;
-        top: 10%;
+    .btnD{
+        width: 100%;
+        height: 57px;
+        
     }
-    100%{
-        opacity: 1;
-        top: 5%;
+    .outbox{
+        margin-top: 90px;
     }
 }
